@@ -1,0 +1,37 @@
+﻿@model IEnumerable<SalesWebMVC.Models.Department>
+
+@{
+    ViewData["PageTitle"] = "Department page";
+}
+
+<h2>@ViewData["PageTitle"]</h2>
+
+<p>
+    <a>Create new Department</a>
+</p>
+
+<table class="table">
+    <head>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+        </tr>
+    </head>
+
+    <tbody>
+        @foreach (Department item in Model)
+        {
+            
+            <tr>
+                <td>
+                    @Html.DisplayName(item.Id.ToString())
+                </td>
+                <td>
+                    @Html.DisplayName(item.Name)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
